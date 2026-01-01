@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F8FA"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sefer Ekle"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#222222"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Kalkış, varış, tarih ve saat bilgilerini girerek yeni sefer oluştur."
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Kart Alanı -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kalkış"
+                    android:textColor="#444444"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp"/>
+
+                <EditText
+                    android:id="@+id/etFrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Örn: İzmir"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:background="@android:drawable/edit_text"
+                    android:inputType="textCapWords"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Varış"
+                    android:textColor="#444444"
+                    android:textStyle="bold"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="6dp"/>
+
+                <EditText
+                    android:id="@+id/etTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Örn: Ankara"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:background="@android:drawable/edit_text"
+                    android:inputType="textCapWords"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tarih"
+                    android:textColor="#444444"
+                    android:textStyle="bold"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="6dp"/>
+
+                <!-- Date picker için: klavye açılmasın, sadece tıklanabilsin -->
+                <EditText
+                    android:id="@+id/etDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Tarih Seç (25.12.2025)"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:background="@android:drawable/edit_text"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:inputType="none" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saat"
+                    android:textColor="#444444"
+                    android:textStyle="bold"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="6dp"/>
+
+                <!-- Time picker için: klavye açılmasın, sadece tıklanabilsin -->
+                <EditText
+                    android:id="@+id/etTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Saat Seç (14:30)"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingRight="14dp"
+                    android:background="@android:drawable/edit_text"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:inputType="none" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnSaveSefer"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="Seferi Kaydet"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#3F51B5"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/cardForm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

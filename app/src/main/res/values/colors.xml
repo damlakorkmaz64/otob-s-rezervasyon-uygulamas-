@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Ana metin rengi -->
+    <color name="textPrimary">#212121</color>
+
+    <!-- İkincil metin rengi -->
+    <color name="textSecondary">#757575</color>
+
+    <!-- Arka plan -->
+    <color name="backgroundLight">#F5F5F5</color>
+
+    <!-- Ana tema rengi -->
+    <color name="primary">#1976D2</color>
+    <color name="seat_available_bg">#E8F5E9</color>
+    <color name="seat_available_text">#1B5E20</color>
+
+    <color name="seat_selected_bg">#1976D2</color>
+    <color name="seat_selected_text">#FFFFFF</color>
+
+    <color name="seat_reserved_bg">#E53935</color>
+    <color name="seat_reserved_text">#FFFFFF</color>
+
+
+</resources>

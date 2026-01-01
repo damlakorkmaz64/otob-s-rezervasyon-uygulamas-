@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.MobileProject"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        >
+
+
+        <!-- LOGIN (AÇILIŞ EKRANI) -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- AUTH -->
+        <activity android:name=".RegisterActivity" />
+
+        <!-- USER -->
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SeatSelectionActivity" />
+        <activity android:name=".ReservationSummaryActivity" />
+        <activity android:name=".ReservationSuccessActivity" />
+        <activity android:name=".ReservationHistoryActivity" />
+
+        <!-- ADMIN -->
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".AddSeferActivity" />
+
+    </application>
+
+</manifest>
